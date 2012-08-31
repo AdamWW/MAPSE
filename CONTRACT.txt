@@ -21,3 +21,11 @@ communication are the most widely used modes outside of meetings. Prompt respons
 messages/inquiries from one another are expected. If a member is unable to deliver as
 promised, they should advise the group in advance so that alternate arrangements can be
 made.
+
+              _.-# Work Expectations and Communication #-._
+
+Each team member is expected to contribute an equal and adequate portion of work on the
+project. Tasks will be assigned regularly during meetings and each member is expected to 
+complete their task in a timely manner. Delays or problems should be communicated to the 
+group as soon as they are encountered. A work log will be maintained to ensure communication,
+accountability, and ease in identifying changes made.

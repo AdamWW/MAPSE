@@ -1,3 +1,8 @@
+----------------------------------------------------------------
+######################## GROUP CONTRACT ########################
+----------------------------------------------------------------
+
+
 (These pieces were taken from a sample document found online...)
 
               _.-# Purpose Statement and Team Objectives #-._

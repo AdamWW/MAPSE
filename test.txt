@@ -7,5 +7,12 @@ This is also a test, is this thing on??
 
 -Paul
 
+<<<<<<< HEAD
 Linux pwns windows.
 -Mike
+=======
+Testing Windows github updating function...
+Can you hear me now?
+
+-Adam
+>>>>>>> fff1811caec219d7ef534bbf0ae6c6351d895462

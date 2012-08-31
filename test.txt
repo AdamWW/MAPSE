@@ -2,3 +2,7 @@ This is a test of the git and github commit functions. Testing the push to the g
 This is only a test!!!
 
 -Adam
+
+This is also a test, is this thing on??
+
+-Paul

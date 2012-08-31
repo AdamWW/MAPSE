@@ -1,3 +1,5 @@
+(These pieces were taken from a sample document found online...)
+
               _.-# Purpose Statement and Team Objectives #-._
 
 This team has been formed to complete the SE group assignment as part of Course CSC-380.

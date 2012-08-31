@@ -56,7 +56,7 @@ accountability, and ease in identifying changes made.
 		I realize that the more work I get to do properly, the more I will learn about
 		the subject, and the better off I'll be.
 		
-	* Keeping #4 in mind, I will not take on more than my fair share of work thus
+	* Keeping the above in mind, I will not take on more than my fair share of work thus
 		keeping others from getting involved, nor will I be unnecessarily dictatorial
 		in telling others what to do.
 

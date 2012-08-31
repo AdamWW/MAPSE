@@ -6,3 +6,6 @@ This is only a test!!!
 This is also a test, is this thing on??
 
 -Paul
+
+Linux pwns windows.
+-Mike

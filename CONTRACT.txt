@@ -1,1 +1,8 @@
-I, the udersigned, hereby agree to abide by the following terms:
+              _.-# Purpose Statement and Team Objectives #-._
+
+This team has been formed to complete the SE group assignment as part of Course CSC-380.
+Our overall objectives are to master the course material related to this project and to demonstrate
+that mastery through our final report and presentation. We are also committed to working effectively
+as a team, by monitoring our process effectiveness, following through on commitments and
+helping one another to learn.
+

@@ -2,6 +2,10 @@
 ######################## GROUP CONTRACT ########################
 ----------------------------------------------------------------
 
+We, the persons named below, do hereby agree individually to the
+following terms during the period defined by the Fall semester
+at SUNY Oswego, between the dates 08/27/2012 - 12/17/2012.
+
 
 (These pieces were taken from a sample document found online...)
 
@@ -31,6 +35,12 @@ group as soon as they are encountered. A work log will be maintained to ensure c
 accountability, and ease in identifying changes made.
 
               _.-# Bullet Points #-._
+              
+	* I will endeavor to communicate with the other members of my group through the
+		various means agreed to by the group as a whole. Electronic (email, IM,...)
+		and phone communication are the most widely used outside meetings. I further
+		agree to give prompt response to messages and inquiries from other members
+		of the group.
 			  
 	* I will show up to all meetings ready to work. If something important comes up that forces
 		me to miss a meeting after I've agreed to it, I will email or phone at least one group
@@ -73,3 +83,8 @@ accountability, and ease in identifying changes made.
 	** I will submit my designated parts of the project and presentation to my
 		fellow group members in a timely manner (github). In addition, I will
 		be sure to meet other interim goals created by the group.
+		
+	By writing your name below with your student ID you signify understanding and
+	agreement to the above contract and terms.
+	
+	- Adam Wilhelmi 803550004

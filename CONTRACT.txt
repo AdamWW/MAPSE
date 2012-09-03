@@ -7,8 +7,6 @@ following terms during the period defined by the Fall semester
 at SUNY Oswego, between the dates 08/27/2012 - 12/17/2012.
 
 
-(These pieces were taken from a sample document found online...)
-
               _.-# Purpose Statement and Team Objectives #-._
 
 This team has been formed to complete the SE group assignment as part of Course CSC-380.

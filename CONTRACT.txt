@@ -87,3 +87,4 @@ accountability, and ease in identifying changes made.
 	
 	- Adam Wilhelmi 803550004
 	- Paul Howden 803755573
+	- Michael Hayes 801560960

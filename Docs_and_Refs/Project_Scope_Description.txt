@@ -1,0 +1,26 @@
+Project Description
+	The application will feature the use of GPS and will be designed to be used while driving.
+
+	There are two main features of the application. The first is a speed limit indicator which will
+	alert the driver to the current speed limit and if they are approaching this speed. Speed
+	limit information will be pulled from a database on the web. There will be a visual indicator,
+	including a changing background color which alerts the driver when they are approaching a customizable
+	speed limit threshold.
+
+	The second feature is an upcoming attractions display. The user can choose the types of 
+	attractions they are interested in seeing (examples: rest stops, restaurants, stores, etc.).
+	The program will display upcoming attractions in a useful and intuitive manner.
+
+Features list
+	- Display speed limit.
+	- Display speed that user is going.
+	- Visual cue to approaching speed limit (color change).
+	- Customizable threshold.
+	- Customizable alarm.
+
+	- Upcoming attractions display.
+	- Customizable local interests/attractions.
+	- Searchable local interests. (Optional if we need more features)
+	
+	- Speed traps/police spotter - Press a button when you see a cop, info is shared with other users. (Optional if we need more features)
+

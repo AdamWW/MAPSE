@@ -1,0 +1,6 @@
+Meet date: 9/10/12
+
+Meeting Agenda Items
+	-Were we all able to get android emulator/development environment
+	up and running?
+	-Other thoughts on division of labor.

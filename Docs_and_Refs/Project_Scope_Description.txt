@@ -24,3 +24,20 @@ Features list
 	
 	- Speed traps/police spotter - Press a button when you see a cop, info is shared with other users. (Optional if we need more features)
 
+-----------------------------------------------------------------
+Project Requirements Documentation:
+
+    * Runs on Android OS (2.2? 4.1?)
+    * Will be developed in Eclipse IDE using the Android sdk
+    * Will draw places data from Google places API
+        - Wifi/3G
+    * Will draw speed limit data from Wikispeedia database
+     	- Wifi/3G
+    * Will read user's current location from device GPS
+    * Will calculate speed from GPS data
+    * Will have ability to submit speed limit sign data to Wikispeedia
+    * Touch screen interface will be usable without distraction
+    * System will alert user if approaching posted speed limit
+    * "Buffer" between current speed and speed limit will be customizable
+    * Alarm/alert will be customizable by user
+    * Device backlight will be adjustable for night driving

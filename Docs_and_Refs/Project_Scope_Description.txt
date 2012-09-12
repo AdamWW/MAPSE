@@ -21,6 +21,12 @@ Features list
 	- Upcoming attractions display.
 	- Customizable local interests/attractions.
 	- Searchable local interests. (Optional if we need more features)
+	- Upcoming attractions are prioritized by what is on the current street but also will display attractions
+	  within a certain range (radius or actual driving range?).
+	- Attractions can be "clicked" on in order to launch GPS navigation (seperate Android application) to navigate
+	  to said attraction.
+	- Other attraction will be available including phone number. Phone number can be clicked on in order to call.
+	  
 	
 -----------------------------------------------------------------
 Project Requirements Documentation:

@@ -22,8 +22,6 @@ Features list
 	- Customizable local interests/attractions.
 	- Searchable local interests. (Optional if we need more features)
 	
-	- Speed traps/police spotter - Press a button when you see a cop, info is shared with other users. (Optional if we need more features)
-
 -----------------------------------------------------------------
 Project Requirements Documentation:
 

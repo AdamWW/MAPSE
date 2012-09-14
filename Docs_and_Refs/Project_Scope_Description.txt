@@ -40,9 +40,13 @@ Project Requirements Documentation:
     * Will read user's current location from device GPS
     * Will calculate speed from GPS data
     * Will have ability to submit speed limit sign data to Wikispeedia
-    * Touch screen interface will be usable without distraction
+    * Touch screen interface will be usable without distraction (while driving).
     * System will alert user if approaching posted speed limit
     * "Buffer" between current speed and speed limit will be customizable
     * Alarm/alert will be customizable by user
     * Device backlight will be adjustable for night driving
     * Optimize algorithms for efficient use of network resources and battery life.
+    
+    * Developers will use a shared Eclipse workspace synchrozied by Github source code repository.
+    * Developers will use prototypes and test frequently. New features and prototypes will be shared weekly.
+    * Developers will use javadoc comments to document their code.

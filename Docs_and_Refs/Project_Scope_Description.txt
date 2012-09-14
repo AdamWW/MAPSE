@@ -45,3 +45,4 @@ Project Requirements Documentation:
     * "Buffer" between current speed and speed limit will be customizable
     * Alarm/alert will be customizable by user
     * Device backlight will be adjustable for night driving
+    * Optimize algorithms for efficient use of network resources and battery life.

@@ -1,52 +1,63 @@
-Project Description
-	The application will feature the use of GPS and will be designed to be used while driving.
+Application Description
+
+	The application features the use of GPS and is designed to be used while driving.
 
 	There are two main features of the application. The first is a speed limit indicator which will
-	alert the driver to the current speed limit and if they are approaching this speed. Speed
-	limit information will be pulled from a database on the web. There will be a visual indicator,
-	including a changing background color which alerts the driver when they are approaching a customizable
-	speed limit threshold.
+	notify the driver of the current speed limit and alert them if they are approaching this speed. Speed
+	limit information is pulled from a database on the web (Google Places). There are several ways in which the driver is
+	warned if they are approaching a customizable speed limit threshold. The background color of the application
+	changes as they approach the threshold. Alarms include flashing background and audio. These alarms can be
+	toggled on and off by the user.
 
-	The second feature is an upcoming attractions display. The user can choose the types of 
+	The second feature is an upcoming attractions display. The user chooses the types of 
 	attractions they are interested in seeing (examples: rest stops, restaurants, stores, etc.).
-	The program will display upcoming attractions in a useful and intuitive manner.
+	The program displays upcoming attractions in geospatial order. As attractions are passed, they are removed
+	from the screen.
 
-Features list
-	- Display speed limit.
-	- Display speed that user is going.
-	- Visual cue to approaching speed limit (color change).
-	- Customizable threshold.
-	- Customizable alarm.
-
-	- Upcoming attractions display.
-	- Customizable local interests/attractions.
-	- Searchable local interests. (Optional if we need more features)
-	- Upcoming attractions are prioritized by what is on the current street but also will display attractions
-	  within a certain range (radius or actual driving range?).
-	- Attractions can be "clicked" on in order to launch GPS navigation (seperate Android application) to navigate
-	  to said attraction.
-	- Other attraction will be available including phone number. Phone number can be clicked on in order to call.
-	  
-	
 -----------------------------------------------------------------
-Project Requirements Documentation:
+Project Requirements
 
-    * Runs on Android OS (2.2? 4.1?)
-    * Will be developed in Eclipse IDE using the Android sdk
-    * Will draw places data from Google places API
-        - Wifi/3G
-    * Will draw speed limit data from Wikispeedia database
-     	- Wifi/3G
-    * Will read user's current location from device GPS
-    * Will calculate speed from GPS data
-    * Will have ability to submit speed limit sign data to Wikispeedia
-    * Touch screen interface will be usable without distraction (while driving).
-    * System will alert user if approaching posted speed limit
-    * "Buffer" between current speed and speed limit will be customizable
-    * Alarm/alert will be customizable by user
-    * Device backlight will be adjustable for night driving
-    * Optimize algorithms for efficient use of network resources and battery life.
-    
-    * Developers will use a shared Eclipse workspace synchrozied by Github source code repository.
-    * Developers will use prototypes and test frequently. New features and prototypes will be shared weekly.
-    * Developers will use javadoc comments to document their code.
+    The application...
+    * runs on Android OS (2.2 and above).
+    * is developed in Eclipse IDE using the Android sdk.
+    * requires internet connectivity (3G/4G or WiFi).
+    * utilizes the Google places API for local attraction information.
+    * utilizes the Wikispeedia database for speed limit data.
+    * utilizes GPS to determine the user's current location and speed.
+    * displays the current speed limit.
+    * calculates and displays the users current speed.
+    * has the ability to submit speed limit data to Wikispeedia.
+    * requires minimal input and attention from the user in order to minimize distraction while driving.
+	* Application activities require no more than 3 inputs while driving.
+    * alerts the user when approaching speed limit threshold.
+    	* The speed limit threshold is customizable.
+	* There are several ways in which the user is alerted...
+            * A changing background color. Color becomes more intense as the user approaches threshold.
+              The colors have a default setting and are also customizable.
+            * A flashing background when the threshold is passed.
+            * An audio alarm when the threshold is passed. There is a default alarm and the user can also
+              customize this.
+	    * The user can select which alerts he/she would like to have.
+    * displays upcoming attractions to the user.
+	* The user can customize the type of attractions which they wish to see.
+	    * This is done in a seperate menu before driving.
+        * Attractions are prioritized first by what is upcoming on the current street. Additionally, attractions
+	  within a certain radius are displayed.
+	* The attractions are arranged in spatial order, indicating proximity to the user.
+	* Attractions which the user has passed are removed from the screen.
+	* Attractions can be "clicked" on in order to launch GPS navigation (seperate Android application) to navigate
+	  to said attraction.
+    * features an adjustable backlight for night driving.
+    * utilizes network resources in an efficient manner.
+	* Network queries occur at most once per minute. Google Places data is buffered in a mile radius.
+
+    * has a disclaimer splash screen, which the user must agree to, stating the following:
+      "This application is not intended to replace normal driving habits or instruments. Speed limit data from 
+      this application may not be accurate. Vehicle speed data my not be accurate. The creators of this application
+      do not condone speeding or irresponsible driving. This application is intended as a technology demonstration only.
+      Use at your own risk."
+
+    Developers...
+    * use a shared Eclipse workspace synchrozied by Github source code repository.
+    * use prototypes and test frequently. New features and prototypes are shared amongst developers weekly.
+    * use javadoc comments to document their code.

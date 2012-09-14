@@ -13,3 +13,6 @@ http://forum.xda-developers.com/showthread.php?t=667298
 
 	** Example program using google places api
 	http://code.google.com/p/android-protips-location/
+
+** Javadoc how-to
+	http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html

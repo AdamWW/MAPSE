@@ -5,8 +5,9 @@ http://forum.xda-developers.com/showthread.php?t=667298
 
 ** Speed limit database and google API
 	http://www.wikispeedia.org/
-	* http://code.google.com/p/speedlimit/
-	** http://en.wikipedia.org/wiki/Wikispeedia
+	http://code.google.com/p/speedlimit/
+	http://en.wikipedia.org/wiki/Wikispeedia
+	https://groups.google.com/forum/?fromgroups#!forum/wikispeedia
 
 ** Google Places API
 	https://developers.google.com/places/documentation/search

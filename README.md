@@ -1,4 +1,1 @@
-Important documents within this repo:
-
-* Work Log
-* Contract
+What goes into a Readme? Let's figure this out...

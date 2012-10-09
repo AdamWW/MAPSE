@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/street" >
+
+    <Button
+        android:id="@+id/spd25"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="21dp"
+        android:text="25MPH" />
+
+    <Button
+        android:id="@+id/spd30"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/spd25"
+        android:layout_centerHorizontal="true"
+        android:text="30MPH" />
+
+    <Button
+        android:id="@+id/spd35"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/spd30"
+        android:layout_alignBottom="@+id/spd30"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="14dp"
+        android:text="35MPH" />
+
+    <Button
+        android:id="@+id/spd45"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spd30"
+        android:layout_below="@+id/spd30"
+        android:layout_marginTop="38dp"
+        android:text="45MPH" />
+
+    <Button
+        android:id="@+id/spd40"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/spd45"
+        android:layout_alignBottom="@+id/spd45"
+        android:layout_alignLeft="@+id/spd25"
+        android:text="40MPH" />
+
+    <Button
+        android:id="@+id/spd50"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/spd45"
+        android:layout_alignBottom="@+id/spd45"
+        android:layout_alignLeft="@+id/spd35"
+        android:text="50MPH" />
+
+    <Button
+        android:id="@+id/spd55"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spd40"
+        android:layout_below="@+id/spd40"
+        android:layout_marginTop="32dp"
+        android:text="55MPH" />
+
+    <Button
+        android:id="@+id/spd60"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/spd55"
+        android:layout_alignBottom="@+id/spd55"
+        android:layout_alignLeft="@+id/spd45"
+        android:text="60MPH" />
+
+    <Button
+        android:id="@+id/spd65"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/spd60"
+        android:layout_alignBottom="@+id/spd60"
+        android:layout_alignRight="@+id/spd50"
+        android:text="65MPH" />
+
+    <Button
+        android:id="@+id/spd70"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spd55"
+        android:layout_below="@+id/spd55"
+        android:layout_marginTop="30dp"
+        android:text="70MPH" />
+
+    <Button
+        android:id="@+id/spd75"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/spd60"
+        android:layout_alignTop="@+id/spd70"
+        android:text="75MPH" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Back" />
+
+</RelativeLayout>

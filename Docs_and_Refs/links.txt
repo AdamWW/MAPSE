@@ -17,3 +17,7 @@ http://forum.xda-developers.com/showthread.php?t=667298
 
 ** Javadoc how-to
 	http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html
+
+** Android API links
+	Toast (popup dialogs): http://developer.android.com/guide/topics/ui/notifiers/toasts.html
+	State lists (buttons): http://developer.android.com/guide/topics/resources/drawable-resource.html#StateList

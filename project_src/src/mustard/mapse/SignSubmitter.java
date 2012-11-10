@@ -1,4 +1,4 @@
-package com.mustard.mapse;
+package mustard.mapse;
 
 import android.os.Bundle;
 import android.app.Activity;

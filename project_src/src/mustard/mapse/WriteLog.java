@@ -1,4 +1,4 @@
-package com.mustard.mapse;
+package mustard.mapse;
 
 import java.io.BufferedWriter;
 import java.io.File;

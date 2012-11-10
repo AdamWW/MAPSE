@@ -19,6 +19,9 @@
     <string name="spd80">Speed Limit 80</string>
     <string name="sbmtmsg">Click a speed to submit sign data for current location</string>
     <string name="back_btn">Back</string>
+    <string name="sbmt_sgns">Submit Sign Data</string>
+    
+    
     
     <string name="name">ENTER NAME</string>
     <string name="email">ENTER EMAIL</string>

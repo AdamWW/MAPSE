@@ -1,0 +1,27 @@
+<resources>
+
+    <string name="app_name">Mustard MAPSE</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Main</string>
+    <string name="title_activity_sign_submitter">Submit Sign Data</string>
+    <string name="spd25">Speed Limit 25</string>
+    <string name="spd30">Speed Limit 30</string>
+    <string name="spd35">Speed Limit 35</string>
+    <string name="spd40">Speed Limit 40</string>
+    <string name="spd45">Speed Limit 45</string>
+    <string name="spd50">Speed Limit 50</string>
+    <string name="spd55">Speed Limit 55</string>
+    <string name="spd60">Speed Limit 60</string>
+    <string name="spd65">Speed Limit 65</string>
+    <string name="spd70">Speed Limit 70</string>
+    <string name="spd75">Speed Limit 75</string>
+    <string name="spd80">Speed Limit 80</string>
+    <string name="sbmtmsg">Click a speed to submit sign data for current location</string>
+    <string name="back_btn">Back</string>
+    
+    <string name="name">ENTER NAME</string>
+    <string name="email">ENTER EMAIL</string>
+    <string name="test">TESTING</string>
+
+</resources>

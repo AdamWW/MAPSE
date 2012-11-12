@@ -68,11 +68,9 @@ public class SLMExtender extends SpeedlimitManager implements Parcelable {
 		//perform the default serialization for all non-transient, non-static fields
 		aOutputStream.defaultWriteObject();
 	}
-	@Override
 	public int describeContents() {
 		return 0;
 	}
-	@Override
 	public void writeToParcel(Parcel dest, int flags) {		
 	}
 	

@@ -26,6 +26,7 @@ public class Main extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
+        
         btn = (Button)findViewById(R.id.signSub);
         txt = (TextView)findViewById(R.id.txt);
         
@@ -35,7 +36,6 @@ public class Main extends Activity {
 			
 			//Create a listener to notify of speedlimit changes
 			SpeedlimitListener sll = new SpeedlimitListener() {
-				@Override
 			    public void onSpeedLimitChanged(Integer speedlimit, String copyright) {
 					//Everything below is called if there is a new sign returned
 				}

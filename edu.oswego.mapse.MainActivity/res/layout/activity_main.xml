@@ -1,0 +1,168 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="61dp"
+        android:text="35"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="56dip" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="55dp"
+        android:text="0"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="56dip" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginLeft="22dp"
+        android:text="WNW"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="56dip" />
+
+    <Button
+        android:id="@+id/signSubmitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignParentRight="true"
+        android:text="Submit Speed Limit" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="Settings" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView3"
+        android:background="#000000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button2"
+        android:layout_below="@+id/view1"
+        android:layout_centerHorizontal="true"
+        android:background="#999999" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight=".475"
+            android:layout_height="match_parent"
+            android:orientation="vertical" 
+            android:gravity="center_horizontal">
+            
+           <Button
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Dollar Tree" 
+	        android:background="#CCCCCC"/>
+           
+           <View 
+             android:layout_width="match_parent"
+             android:layout_height="50dp" />
+           
+           <View 
+             android:layout_width="match_parent"
+             android:layout_height="50dp" />
+                                
+           <View 
+             android:layout_width="match_parent"
+             android:layout_height="50dp" />
+           
+           <Button
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Target" 
+	        android:background="#CCCCCC"/>
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight=".05"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <View 
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#000000" />
+            <View 
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#999999" />
+            <View 
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#000000" />
+            <View 
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#999999" />
+            <View 
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#000000" />
+            <View 
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#999999" />
+            <View 
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight=".475"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal" >
+            
+            <View 
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+            
+            <View 
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#CCCCCC"
+                android:text="McDonalds" />
+      
+        </LinearLayout>
+
+    </LinearLayout>
+    
+
+</RelativeLayout>

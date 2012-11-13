@@ -6,9 +6,11 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Main extends Activity {
 	
@@ -59,10 +61,52 @@ public class Main extends Activity {
             }//end onClick
         });//end new onclick listener     
     }
+    
+    public void settings() {
+    	try {
+			//Starting a new Intent
+			Intent i = new Intent(getApplicationContext(), Settings.class);
+			startActivity(i);
+		} catch (Exception e) {
+			txt.setText(e.getMessage());
+		}
+    }
+    public void showHelp() {
+    	txt.setText("HELP TESTTESTTESTTEST");
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_main, menu);
         return true;
     }
-}
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.menu_settings:
+                settings();
+                return true;
+            case R.id.help:
+                showHelp();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}//END MAIN!!!

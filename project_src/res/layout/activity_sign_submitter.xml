@@ -20,7 +20,10 @@
             android:background="@drawable/spdbutton"
             android:height="80dp"
             android:text="@string/spd25"
-            android:textSize="18dp"
+            android:textColor="@color/DarkBlue"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:typeface="monospace"
             android:width="60dip" />
 
         <View 
@@ -35,7 +38,10 @@
             android:background="@drawable/spdbutton"
             android:gravity="center"
             android:text="@string/spd30"
-            android:textSize="18dp"
+            android:typeface="monospace"
+            android:textColor="@color/DarkBlue"
+            android:textSize="35dp"
+            android:textStyle="bold"
             android:width="60dip"
             android:height="80dp"  />
 
@@ -47,10 +53,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/spdbutton"
-            android:textSize="18dp"
+            android:textColor="@color/DarkBlue"
+            android:textSize="35dp"
+            android:textStyle="bold"
             android:width="60dip"
             android:height="80dp" 
-            android:text="@string/spd35" />
+            android:text="@string/spd35"
+            android:typeface="monospace" />
     </LinearLayout>
 
     <LinearLayout
@@ -68,7 +77,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/spdbutton"
-            android:textSize="18dp"
+            android:textColor="@color/DarkBlue"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:typeface="monospace"
             android:width="60dip"
             android:height="80dp" 
             android:text="@string/spd40" />
@@ -80,7 +92,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/spdbutton"
-            android:textSize="18dp"
+            android:typeface="monospace"
+            android:textColor="@color/DarkBlue"
+            android:textSize="35dp"
+            android:textStyle="bold"
             android:width="60dip"
             android:height="80dp" 
             android:text="@string/spd45" />
@@ -92,7 +107,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/spdbutton"
-            android:textSize="18dp"
+            android:typeface="monospace"
+            android:textColor="@color/DarkBlue"
+            android:textSize="35dp"
+            android:textStyle="bold"
             android:width="60dip"
             android:height="80dp" 
             android:text="@string/spd50" />
@@ -113,8 +131,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/spdbutton"
-            android:textSize="18dp"
+            android:textColor="@color/DarkBlue"
+            android:textSize="35dp"
+            android:textStyle="bold"
             android:width="60dip"
+            android:typeface="monospace"
             android:height="80dp" 
             android:text="@string/spd55" />
         <View 
@@ -125,7 +146,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/spdbutton"
-            android:textSize="18dp"
+            android:typeface="monospace"
+            android:textColor="@color/DarkBlue"
+            android:textSize="35dp"
+            android:textStyle="bold"
             android:width="60dip"
             android:height="80dp" 
             android:text="@string/spd60" />
@@ -137,7 +161,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/spdbutton"
-            android:textSize="18dp"
+            android:typeface="monospace"
+            android:textColor="@color/DarkBlue"
+            android:textSize="35dp"
+            android:textStyle="bold"
             android:width="60dip"
             android:height="80dp" 
             android:text="@string/spd65" />
@@ -157,8 +184,11 @@
             android:id="@+id/spd70"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:typeface="monospace"
             android:background="@drawable/spdbutton"
-            android:textSize="18dp"
+            android:textColor="@color/DarkBlue"
+            android:textSize="35dp"
+            android:textStyle="bold"
             android:width="60dip"
             android:height="80dp" 
             android:text="@string/spd70" />
@@ -170,7 +200,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/spdbutton"
-            android:textSize="18dp"
+            android:textColor="@color/DarkBlue"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:typeface="monospace"
             android:width="60dip"
             android:height="80dp" 
             android:text="@string/spd75" />
@@ -182,7 +215,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/spdbutton"
-            android:textSize="18dp"
+            android:typeface="monospace"
+            android:textColor="@color/DarkBlue"
+            android:textSize="35dp"
+            android:textStyle="bold"
             android:width="60dip"
             android:height="80dp" 
             android:text="@string/spd80" />

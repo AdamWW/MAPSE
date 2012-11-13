@@ -6,7 +6,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class WriteLog {
-	File logFile = new File("sdcard/mapse/log.file");
+	File logFile = new File("/log.file");
+	//Environment.getExternalStorageDirectory().getPath()
 	
 	public WriteLog () {
 	       if (!logFile.exists()) {

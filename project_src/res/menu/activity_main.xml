@@ -3,4 +3,9 @@
         android:title="@string/menu_settings"
         android:orderInCategory="100"
         android:showAsAction="never" />
+    
+    <item android:id="@+id/help"
+          android:icon="@drawable/ico"
+          android:title="HELP!!" />
+        
 </menu>

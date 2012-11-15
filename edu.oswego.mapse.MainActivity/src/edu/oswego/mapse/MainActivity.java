@@ -30,6 +30,7 @@ public class MainActivity extends Activity {
 	private int speedingThreshold;
 
 	private ColorChangeController colorScale;
+	private RoadAnimator roadAnimator;
 	private AlertDialog alertDialog;
 	private SLMExtender slm;
 	private Button signSubmitButton;
@@ -65,6 +66,7 @@ public class MainActivity extends Activity {
 		background = findViewById(R.id.mainLayout);
 		handler = new Handler();
 		colorScale = new ColorChangeController(speedingThreshold);
+		roadAnimator = new RoadAnimator(handler, this, findViewById(R.id.middleLine), currentSpeed);
 
 		// Build speeding alert dialog
 		alertDialog = new AlertDialog.Builder(this).setTitle("Caution")
@@ -105,7 +107,7 @@ public class MainActivity extends Activity {
 		
 
 		startSpeedChangeSimulation(this, 30, -1, 500);
-
+		
 	}
 
 	@Override
@@ -166,6 +168,7 @@ public class MainActivity extends Activity {
 
 	public void updateSpeed(int speed) {
 		currentSpeed = speed;
+		roadAnimator.updateSpeed(speed);
 		currentSpeedText.setText(Integer.toString(speed));
 		int color = colorScale.getColor(currentSpeedLimit, currentSpeed);
 		background.setBackgroundColor(color);

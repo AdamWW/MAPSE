@@ -105,10 +105,13 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/middleLine"
             android:layout_width="0dp"
-            android:layout_weight=".05"
             android:layout_height="wrap_content"
+            android:layout_weight=".05"
             android:orientation="vertical" >
+
+            <!-- 
             <View 
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -137,6 +140,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="#000000" />
+                -->
         </LinearLayout>
 
         <LinearLayout

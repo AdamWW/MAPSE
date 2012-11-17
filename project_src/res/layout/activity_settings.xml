@@ -116,13 +116,15 @@
 
     <Button
         android:id="@+id/viewDisclaimer"
+        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="5dp"
         android:layout_alignLeft="@+id/cat_prompt"
         android:layout_below="@+id/cat_spinner"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="25dp"
         android:text="@string/disclaim_btn" />
+
 
 </RelativeLayout>

@@ -5,12 +5,12 @@ import org.wikispeedia.speedlimit.SpeedlimitListener;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class Main extends Activity {
 	
@@ -22,6 +22,7 @@ public class Main extends Activity {
 	WriteLog logger = new WriteLog();
 	Button btn;
 	TextView txt;
+	DBManager dbman;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -59,20 +60,11 @@ public class Main extends Activity {
 					txt.setText(e.getMessage());
 				}
             }//end onClick
-        });//end new onclick listener     
-    }
-    
-    public void settings() {
-    	try {
-			//Starting a new Intent
-			Intent i = new Intent(getApplicationContext(), Settings.class);
-			startActivity(i);
-		} catch (Exception e) {
-			txt.setText(e.getMessage());
-		}
-    }
-    public void showHelp() {
-    	txt.setText("HELP TESTTESTTESTTEST");
+        });//end new onclick listener
+        //Listening to button event
+        dbman = new DBManager(getApplicationContext());
+        
+
     }
 
     @Override
@@ -86,10 +78,13 @@ public class Main extends Activity {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.menu_settings:
-                settings();
-                return true;
-            case R.id.help:
-                showHelp();
+            	try {
+        			//Starting a new Intent
+        			Intent i = new Intent(getApplicationContext(), Settings.class);
+        			startActivity(i);
+        		} catch (Exception q) {
+        			Log.e("settings error", q.getMessage());
+        		}
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

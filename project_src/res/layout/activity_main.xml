@@ -20,6 +20,5 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="154dp"
         android:text="@string/sbmt_sgns" />
-    
 
 </RelativeLayout>

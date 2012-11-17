@@ -69,8 +69,7 @@ public class MainActivity extends Activity {
         roadAnimator = new RoadAnimator(handler, this, findViewById(R.id.middleLine), currentSpeed);
 
         // Build speeding alert dialog
-        alertDialog = new AlertDialog.Builder(this).setTitle("Caution")
-            .setMessage("You are speeding!").setCancelable(false).create();
+        alertDialog = new AlertDialog.Builder(this).setTitle("Caution").setMessage("You are speeding!").setCancelable(false).create();
 
         // Instantiate a new manager for the wikispeedia database
         try {

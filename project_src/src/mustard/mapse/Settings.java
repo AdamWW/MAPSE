@@ -2,7 +2,6 @@ package mustard.mapse;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.content.Intent;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -18,6 +17,8 @@ import android.widget.Toast;
 
 public class Settings extends Activity implements OnItemSelectedListener{
 
+	private final Boolean DEBUG = true;
+	
 	private EditText editName;
 	private EditText editEmail;
 	private EditText editThresh;
@@ -37,19 +38,10 @@ public class Settings extends Activity implements OnItemSelectedListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         
-        //Try to pull the settings object out of the parcelable passed in
-        Intent i;
-		try {
-			i = getIntent();
-			try {
-				stgs = (UserSettings)i.getParcelableExtra("settings");
-			} catch (Exception e) {
-				stgs = new UserSettings();
-				Log.e("settings error", e.getMessage());
-			}//end try/catch
-		} finally{
-			stgs = new UserSettings();
-		}
+        //Manager to interact with the database
+        dbman = new DBManager (this.getApplicationContext());
+        
+        stgs = dbman.getSettings();
 	        
         
         //Spinner for selecting category for places:
@@ -113,8 +105,7 @@ public class Settings extends Activity implements OnItemSelectedListener{
   	});
      
      
-     //Manager to interact with the database
-     dbman = new DBManager (this.getApplicationContext());
+     
      
      
  	ok = (Button)findViewById(R.id.ok);
@@ -139,20 +130,24 @@ public class Settings extends Activity implements OnItemSelectedListener{
  			} catch (Exception e) {
  				Toast.makeText(getBaseContext(), e.getMessage(),Toast.LENGTH_LONG).show();
  			}
+ 			finish();
          }//end onClick
      });//end new onclick listener  
      
    //What happens when left button is clicked??
      cancel.setOnClickListener(new View.OnClickListener() {
          public void onClick(View arg0) {
-        	 UserSettings set = dbman.getAllSettings().get(0);
-        	 Toast.makeText(getBaseContext(),"Name: " + set.getUserName()
-        			 + "\nEmail: " + set.getUserEmail()
-        			 + "\nAlarm: " + set.getAlarm()
-        			 + "\nCategory: " + set.getCat()
-        			 + "\nThreshold: " + set.getAlarmThreshold()
-        			 + "\nFirst_Run: " + set.getFirstRun()
-        			 ,Toast.LENGTH_LONG).show();
+        	 UserSettings set = dbman.getSettings();
+        	 if(DEBUG){
+        		 Toast.makeText(getBaseContext(),"Name: " + set.getUserName()
+	        			 + "\nEmail: " + set.getUserEmail()
+	        			 + "\nAlarm: " + set.getAlarm()
+	        			 + "\nCategory: " + set.getCat()
+	        			 + "\nThreshold: " + set.getAlarmThreshold()
+	        			 + "\nFirst_Run: " + set.getFirstRun()
+	        			 ,Toast.LENGTH_LONG).show();
+        	 }
+	        	 
         	 finish();
      }//end onClick
     });//end new onclick listener   

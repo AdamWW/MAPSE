@@ -22,6 +22,7 @@ public class Main extends Activity {
 	SLMExtender slm; // <------Needed!
 	WriteLog logger = new WriteLog();
 	Button btn;
+	Button btn2;
 	TextView txt;
 	DBManager dbman; // <------Needed!
 	private UserSettings stgs; // <------Needed!
@@ -34,15 +35,13 @@ public class Main extends Activity {
     	 * Mike: This bit is important. This is where we look to see if there
     	 * are already settings in the database, otherwise we instantiate a new
     	 * settings object by showing the splash screen & running settings (first run).
-    	 * (probably not the most efficient way to do this...)
+    	 * (the important part is stgs=dbman.getSettings();
+    	 * 	as this grabs all the user settings from the DB)
     	 */
     	dbman = new DBManager(this.getApplicationContext());
-    	try{
-    		stgs = dbman.getSettings();
-    		if(stgs.getFirstRun()!=0){
-    			throw(new Exception());
-    		}
-    	}catch(Exception e){
+    	
+    	stgs = dbman.getSettings();
+    	if(stgs.getFirstRun()==1){//if firstrun is 1, settings has not been run yet
     		showSplash();
     	}
     	
@@ -51,6 +50,7 @@ public class Main extends Activity {
         setContentView(R.layout.activity_main);
         
         btn = (Button)findViewById(R.id.signSub);
+        btn2 = (Button)findViewById(R.id.button1);
         txt = (TextView)findViewById(R.id.txt);
         
         //Instantiate a new manager for the wikispeedia database
@@ -84,7 +84,12 @@ public class Main extends Activity {
         });//end new onclick listener
         //Listening to button event
         
-        
+        btn2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+            	txt.setText(stgs.getUserName());
+            }//end onClick
+        });//end new onclick listener
+        //Listening to button event
 
     }
 

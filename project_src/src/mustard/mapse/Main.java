@@ -34,6 +34,7 @@ public class Main extends Activity {
     	 * Mike: This bit is important. This is where we look to see if there
     	 * are already settings in the database, otherwise we instantiate a new
     	 * settings object by showing the splash screen & running settings (first run).
+    	 * (probably not the most efficient way to do this...)
     	 */
     	dbman = new DBManager(this.getApplicationContext());
     	try{
@@ -108,6 +109,7 @@ public class Main extends Activity {
             	try {
         			//Starting a new Intent
         			Intent i = new Intent(getApplicationContext(), Settings.class);
+        			i.putExtra("settings", stgs);
         			startActivity(i);
         		} catch (Exception q) {
         			Log.e("settings error", q.getMessage());
@@ -117,8 +119,6 @@ public class Main extends Activity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
-
 
 
 

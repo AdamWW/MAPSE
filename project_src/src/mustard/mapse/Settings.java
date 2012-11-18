@@ -2,6 +2,7 @@ package mustard.mapse;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -36,7 +37,20 @@ public class Settings extends Activity implements OnItemSelectedListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         
-        stgs = new UserSettings();
+        //Try to pull the settings object out of the parcelable passed in
+        Intent i;
+		try {
+			i = getIntent();
+			try {
+				stgs = (UserSettings)i.getParcelableExtra("settings");
+			} catch (Exception e) {
+				stgs = new UserSettings();
+				Log.e("settings error", e.getMessage());
+			}//end try/catch
+		} finally{
+			stgs = new UserSettings();
+		}
+	        
         
         //Spinner for selecting category for places:
         Spinner catspin = (Spinner) findViewById(R.id.cat_spinner);

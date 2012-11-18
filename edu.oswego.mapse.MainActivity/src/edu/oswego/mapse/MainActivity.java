@@ -1,6 +1,7 @@
 package edu.oswego.mapse;
 
 import org.wikispeedia.speedlimit.SpeedlimitListener;
+import org.wikispeedia.speedlimit.SpeedlimitManager;
 
 import edu.oswego.mapse.R;
 import android.media.AudioManager;
@@ -22,6 +23,7 @@ import android.widget.TextView;
 public class MainActivity extends Activity implements SpeedlimitListener {
 	protected PowerManager.WakeLock mWakeLock;
     private TextView currentSpeedText;
+    private TextView speedLimitText;
     private View background;
     private Handler handler;
 
@@ -43,15 +45,20 @@ public class MainActivity extends Activity implements SpeedlimitListener {
     private SoundPool soundPool;
     private int soundID;
     boolean soundLoaded = false;
+    
+    private SpeedlimitManager speedLimitManager;
 
 @Override
-    public void onCreate(Bundle savedInstanceState) {
+     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
         final PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
         this.mWakeLock = pm.newWakeLock(PowerManager.SCREEN_BRIGHT_WAKE_LOCK, "Off Lock");
         this.mWakeLock.acquire();
+        
+        speedLimitManager = new SpeedlimitManager(this);
+        speedLimitManager.requestChanges(this);
 
         // Instantiate sound stuff
         this.setVolumeControlStream(AudioManager.STREAM_MUSIC);
@@ -66,8 +73,14 @@ public class MainActivity extends Activity implements SpeedlimitListener {
 
         // Instantiate other stuff
         currentSpeedText = (TextView) findViewById(R.id.textView1);
-        currentSpeed = 0;
+        speedLimitText = (TextView) findViewById(R.id.textView2);
+        
         currentSpeedLimit = 35;
+        speedLimitText.setText("35");
+        
+        currentSpeed = 0;
+        
+        
         speedingThreshold = 10;
         background = findViewById(R.id.mainLayout);
         handler = new Handler();
@@ -93,6 +106,8 @@ public class MainActivity extends Activity implements SpeedlimitListener {
         } catch (Exception e) {
             Log.e("Thing", e.getMessage());
         }
+        
+        updateSpeed(0);
 
         startSpeedChangeSimulation(this, 68, 1, 300);
 
@@ -142,6 +157,9 @@ public class MainActivity extends Activity implements SpeedlimitListener {
 
 	public void onSpeedLimitChanged(Integer speedLimit, String copyright){
 		currentSpeedLimit = speedLimit;
+		this.currentSpeedLimit = speedLimit;
+		speedLimitText.setText(speedLimit.toString());
+		
 	}
 
     /*

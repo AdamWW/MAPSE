@@ -13,4 +13,6 @@
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="android.R"/>
 <fullyQualifiedTypeName name="android.os.PowerManager"/>
+<fullyQualifiedTypeName name="org.wikispeedia.speedlimit.SpeedlimitManager"/>
+<fullyQualifiedTypeName name="edu.oswego.mapse.R.id"/>
 </qualifiedTypeNameHistroy>

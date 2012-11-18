@@ -8,6 +8,7 @@ import android.media.SoundPool;
 import android.media.SoundPool.OnLoadCompleteListener;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.PowerManager;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -18,7 +19,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements SpeedlimitListener {
+	protected PowerManager.WakeLock mWakeLock;
     private TextView currentSpeedText;
     private View background;
     private Handler handler;
@@ -46,6 +48,10 @@ public class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        final PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
+        this.mWakeLock = pm.newWakeLock(PowerManager.SCREEN_BRIGHT_WAKE_LOCK, "Off Lock");
+        this.mWakeLock.acquire();
 
         // Instantiate sound stuff
         this.setVolumeControlStream(AudioManager.STREAM_MUSIC);
@@ -61,7 +67,7 @@ public class MainActivity extends Activity {
         // Instantiate other stuff
         currentSpeedText = (TextView) findViewById(R.id.textView1);
         currentSpeed = 0;
-        currentSpeedLimit = 55;
+        currentSpeedLimit = 35;
         speedingThreshold = 10;
         background = findViewById(R.id.mainLayout);
         handler = new Handler();
@@ -117,9 +123,26 @@ public class MainActivity extends Activity {
 
 @Override
     public void onResume() {
+		this.mWakeLock.acquire();
         super.onResume();
 
     }
+
+@Override
+	public void onPause() {
+		this.mWakeLock.release();
+		super.onPause();
+	}
+
+@Override
+	public void onDestroy() {
+		this.mWakeLock.release();
+	    super.onDestroy();
+	}
+
+	public void onSpeedLimitChanged(Integer speedLimit, String copyright){
+		currentSpeedLimit = speedLimit;
+	}
 
     /*
      * Simulates driving speed change by calling updateSpeed() repeatedly. Needs

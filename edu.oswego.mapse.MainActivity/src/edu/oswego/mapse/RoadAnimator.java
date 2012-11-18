@@ -15,22 +15,13 @@ public class RoadAnimator {
 	private Handler handler;
 	private int delay;
 	
-	private final int DASH_HEIGHT = 40;
+	private final int DASH_HEIGHT = 60;
 	private final int DASH_WIDTH = 20;
 	
 	public RoadAnimator(Handler handler, Context context, View middleLine, int speed){
 		this.handler = handler;
 		this.middleLine = (LinearLayout)middleLine;
 		this.context = context;
-		
-		//Populate initial dashes
-		addDash();
-		addBlank();
-		addDash();
-		addBlank();
-		addDash();
-		addBlank();
-		addDash();
 		
 		//Start animation loop
 		start();

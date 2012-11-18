@@ -167,8 +167,7 @@ public final class R {
         public static final int alarm_prompt=0x7f090008;
         public static final int alarm_spinner=0x7f090009;
         public static final int back=0x7f090020;
-        public static final int btn1=0x7f09000c;
-        public static final int btn2=0x7f09000d;
+        public static final int cancel=0x7f09000d;
         public static final int cat_prompt=0x7f09000a;
         public static final int cat_spinner=0x7f09000b;
         public static final int email_prompt=0x7f090004;
@@ -179,6 +178,7 @@ public final class R {
         public static final int menu_settings=0x7f090021;
         public static final int msg=0x7f09001f;
         public static final int name_prompt=0x7f090002;
+        public static final int ok=0x7f09000c;
         public static final int signSub=0x7f090001;
         public static final int slct_num=0x7f090007;
         public static final int spd25=0x7f090010;
@@ -221,6 +221,7 @@ public final class R {
         public static final int back_btn=0x7f060012;
         public static final int cat_prompt=0x7f060019;
         public static final int disclaim_btn=0x7f06001d;
+        public static final int disclaimer=0x7f06001e;
         public static final int email_hint=0x7f06001b;
         public static final int email_prompt=0x7f060018;
         public static final int hello_world=0x7f060001;

@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Main extends Activity {
 	
@@ -18,14 +19,33 @@ public class Main extends Activity {
 	 * Everything I've put in here is essentially just test/sample/example code! 
 	 */
 	
-	SLMExtender slm;
+	SLMExtender slm; // <------Needed!
 	WriteLog logger = new WriteLog();
 	Button btn;
 	TextView txt;
-	DBManager dbman;
+	DBManager dbman; // <------Needed!
+	private UserSettings stgs; // <------Needed!
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
+    	
+    	
+    	/***************
+    	 * Mike: This bit is important. This is where we look to see if there
+    	 * are already settings in the database, otherwise we instantiate a new
+    	 * settings object by showing the splash screen & running settings (first run).
+    	 */
+    	dbman = new DBManager(this.getApplicationContext());
+    	try{
+    		stgs = dbman.getSettings();
+    		if(stgs.getFirstRun()!=0){
+    			throw(new Exception());
+    		}
+    	}catch(Exception e){
+    		showSplash();
+    	}
+    	
+    	
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
@@ -62,12 +82,19 @@ public class Main extends Activity {
             }//end onClick
         });//end new onclick listener
         //Listening to button event
-        dbman = new DBManager(getApplicationContext());
+        
         
 
     }
 
-    @Override
+    private void showSplash() {
+		stgs = new UserSettings();
+		Toast.makeText(getBaseContext(), "This is when the splash screen would be displayed.",
+				Toast.LENGTH_LONG).show();
+		
+	}
+
+	@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_main, menu);
         return true;

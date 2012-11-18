@@ -19,6 +19,11 @@ public class Settings extends Activity implements OnItemSelectedListener{
 
 	private EditText editName;
 	private EditText editEmail;
+	private EditText editThresh;
+	
+	private Button ok;
+	private Button cancel;
+	private Button viewDisclaimer;
 	
 	//for DB use
 	private DBManager dbman;
@@ -59,6 +64,7 @@ public class Settings extends Activity implements OnItemSelectedListener{
 
      editName = (EditText)findViewById(R.id.txt_name);
      editEmail = (EditText)findViewById(R.id.txt_email);
+     editThresh = (EditText)findViewById(R.id.slct_num);
      
      //The following listen to the edit text elements
      editName.addTextChangedListener(new TextWatcher() {
@@ -71,7 +77,7 @@ public class Settings extends Activity implements OnItemSelectedListener{
     	       stgs.setUserName(s.toString());
     	    }
     });
-     editEmail.addTextChangedListener(new TextWatcher() {
+    editEmail.addTextChangedListener(new TextWatcher() {
  	    public void afterTextChanged(Editable s) {
  	         Log.v("LOG","After text change value "+s.toString());
  	    }
@@ -81,28 +87,40 @@ public class Settings extends Activity implements OnItemSelectedListener{
  	    	stgs.setUserEmail(s.toString());
  	    }
  	});
+    editThresh.addTextChangedListener(new TextWatcher() {
+  	    public void afterTextChanged(Editable s) {
+  	         Log.v("LOG","After text change value "+s.toString());
+  	    }
+  	    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+  	    	}
+  	    public void onTextChanged(CharSequence s, int start, int before, int count) {
+  	    	stgs.setAlarmThreshold(Integer.parseInt(s.toString()));
+  	    }
+  	});
      
      
      //Manager to interact with the database
      dbman = new DBManager (this.getApplicationContext());
      
      
- 	Button btn = (Button)findViewById(R.id.btn1);
- 	btn.setText("Save");
+ 	ok = (Button)findViewById(R.id.ok);
+ 	ok.setText("OK");
      
-    Button btn2 = (Button)findViewById(R.id.btn2);
-    btn2.setText("View");
+    cancel = (Button)findViewById(R.id.cancel);
+    cancel.setText("Cancel");
+    
+    viewDisclaimer = (Button)findViewById(R.id.viewDisclaimer);
      
     //What happens when right button clicked??
-     btn.setOnClickListener(new View.OnClickListener() {
+     ok.setOnClickListener(new View.OnClickListener() {
          public void onClick(View arg0) {
-         	
+         	stgs.setFirstRun(0);
  			try {
  				if(dbman.updateSettings(stgs) <= 0){
  					dbman.addSettings(stgs);
- 					Toast.makeText(getBaseContext(), "New entry inserted",Toast.LENGTH_SHORT).show(); 
+ 					Toast.makeText(getBaseContext(), "New settings saved",Toast.LENGTH_SHORT).show(); 
  				}else{
- 					Toast.makeText(getBaseContext(), "Entry updated",Toast.LENGTH_SHORT).show(); 
+ 					Toast.makeText(getBaseContext(), "Settings saved.",Toast.LENGTH_SHORT).show(); 
  				}
  			} catch (Exception e) {
  				Toast.makeText(getBaseContext(), e.getMessage(),Toast.LENGTH_LONG).show();
@@ -111,15 +129,26 @@ public class Settings extends Activity implements OnItemSelectedListener{
      });//end new onclick listener  
      
    //What happens when left button is clicked??
-     btn2.setOnClickListener(new View.OnClickListener() {
+     cancel.setOnClickListener(new View.OnClickListener() {
          public void onClick(View arg0) {
         	 UserSettings set = dbman.getAllSettings().get(0);
         	 Toast.makeText(getBaseContext(),"Name: " + set.getUserName()
-        			 + "\nEmail: " + set.getUserEmail() + "\nAlarm: " + set.getAlarm()
+        			 + "\nEmail: " + set.getUserEmail()
+        			 + "\nAlarm: " + set.getAlarm()
         			 + "\nCategory: " + set.getCat()
-        			 ,Toast.LENGTH_LONG).show();     
+        			 + "\nThreshold: " + set.getAlarmThreshold()
+        			 + "\nFirst_Run: " + set.getFirstRun()
+        			 ,Toast.LENGTH_LONG).show();
+        	 finish();
      }//end onClick
     });//end new onclick listener   
+     
+    viewDisclaimer.setOnClickListener(new View.OnClickListener() {
+         public void onClick(View arg0) {
+         	
+        	 Toast.makeText(getBaseContext(), R.string.disclaimer,Toast.LENGTH_LONG).show();
+         }//end onClick
+     });//end new onclick listener
 
      
      

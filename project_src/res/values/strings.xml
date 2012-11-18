@@ -24,13 +24,15 @@
     <string name="title_activity_settings">Settings</string>
     
     <string name="name_prompt">Please enter your name</string>
-    <string name="alarm_prompt">Select an alarm</string>
+    <string name="alarm_prompt">Please select an alarm</string>
     <string name="email_prompt">Please enter your email</string>
-    <string name="cat_prompt">Select which results to see</string>
+    <string name="cat_prompt">Please select which results to see</string>
     <string name="name_hint">YourName</string>
     <string name="email_hint">email@domain.com</string>
     <string name="thresh_prompt">Please enter a speeding alarm threshold</string>
     <string name="disclaim_btn">Click to view disclaimer</string>
+    <string name="disclaimer">This is the disclaimer. This is the same
+        text as will be shown on first run.</string>
     
 
     

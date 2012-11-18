@@ -42,7 +42,7 @@ public class DBManager extends SQLiteOpenHelper {
                 + KEY_ALARM + " TEXT,"
         		+ KEY_CAT + " TEXT,"
         		+ KEY_THRESH + " INTEGER,"
-        		+ KEY_FIRSTRUN + " INTEGER," + ")";
+        		+ KEY_FIRSTRUN + " INTEGER" + ")";
         db.execSQL(CREATE_SETTINGS_TABLE);
     }
  

@@ -1,6 +1,9 @@
 package mustard.mapse;
 
-public class UserSettings {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class UserSettings implements Parcelable{
 	private String userName;
 	private String userEmail;
 	private String alarm;
@@ -14,12 +17,12 @@ public class UserSettings {
 	
 	//constructor
 	public UserSettings(){
-		userName = "Name";
-		userEmail = "address@domain.com";
+		userName = "YourName";
+		userEmail = "email@domain.com";
 		alarm = alarmArr[0];
+		cat = null;
 		alarmThreshold = 5;
 		firstRun = 1;
-		cat = null;
 	}
 
 	public String getUserName() {
@@ -82,6 +85,18 @@ public class UserSettings {
 
 	public void setCatArr(String[] catArr) {
 		this.catArr = catArr;
+	}
+
+	@Override
+	public int describeContents() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void writeToParcel(Parcel dest, int flags) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

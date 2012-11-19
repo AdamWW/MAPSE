@@ -1,3 +1,3 @@
-What goes into a Readme? Let's figure this out...
+This is a readme. It is empty.
 
-Testing 1, 2, 3
+:P

@@ -1,0 +1,41 @@
+<resources>
+
+    <string name="app_name">Mustard MAPSE</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Main</string>
+    <string name="title_activity_sign_submitter">Submit Sign Data</string>
+    <string name="spd25">25</string>
+    <string name="spd30">30</string>
+    <string name="spd35">35</string>
+    <string name="spd40">40</string>
+    <string name="spd45">45</string>
+    <string name="spd50">50</string>
+    <string name="spd55">55</string>
+    <string name="spd60">60</string>
+    <string name="spd65">65</string>
+    <string name="spd70">70</string>
+    <string name="spd75">75</string>
+    <string name="spd80">80</string>
+    <string name="sbmtmsg">Click a speed to submit sign data for current location</string>
+    <string name="back_btn">Back</string>
+    <string name="sbmt_sgns">Submit Sign Data</string>
+    <string name="test">TESTING</string>
+    <string name="title_activity_settings">Settings</string>
+    
+    <string name="name_prompt">Please enter your name</string>
+    <string name="alarm_prompt">Please select an alarm</string>
+    <string name="email_prompt">Please enter your email</string>
+    <string name="cat_prompt">Please select which results to see</string>
+    <string name="name_hint">YourName</string>
+    <string name="email_hint">email@domain.com</string>
+    <string name="thresh_prompt">Please enter a speeding alarm threshold</string>
+    <string name="disclaim_btn">Click to view disclaimer</string>
+    <string name="disclaimer">This is the disclaimer. This is the same
+        text as will be shown on first run.</string>
+    
+
+    
+    
+
+</resources>

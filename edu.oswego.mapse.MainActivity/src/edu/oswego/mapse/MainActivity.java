@@ -16,6 +16,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -154,6 +155,24 @@ public class MainActivity extends Activity implements SpeedlimitListener {
 		this.mWakeLock.release();
 	    super.onDestroy();
 	}
+
+@Override
+public boolean onOptionsItemSelected(MenuItem item) {
+    // Handle item selection
+    switch (item.getItemId()) {
+        case R.id.menu_settings:
+        	try {
+    			//Starting a new Intent
+    			Intent i = new Intent(getApplicationContext(), Settings.class);
+    			startActivity(i);
+    		} catch (Exception q) {
+    			Log.e("settings error", q.getMessage());
+    		}
+            return true;
+        default:
+            return super.onOptionsItemSelected(item);
+    }
+}
 
 	public void onSpeedLimitChanged(Integer speedLimit, String copyright){
 		currentSpeedLimit = speedLimit;

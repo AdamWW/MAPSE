@@ -1,5 +1,0 @@
-Group meeting agenda for 9/17/12.
-
-	-General discussion on project progress and research.
-	-Solidify division of labor.
-	-First goals for features implementation.

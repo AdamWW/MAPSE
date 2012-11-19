@@ -1,3 +1,0 @@
-What goes into a Readme? Let's figure this out...
-
-Testing 1, 2, 3

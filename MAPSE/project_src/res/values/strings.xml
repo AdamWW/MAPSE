@@ -3,7 +3,7 @@
     <string name="app_name">Mustard MAPSE</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
-    <string name="title_activity_main">MAPSE</string>
+    <string name="title_activity_main">Main</string>
     <string name="title_activity_sign_submitter">Submit Sign Data</string>
     <string name="spd25">25</string>
     <string name="spd30">30</string>

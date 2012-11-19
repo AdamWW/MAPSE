@@ -1,6 +1,5 @@
 package mustard.mapse;
 
-import mustard.mapse.R;
 import android.os.Bundle;
 import android.app.Activity;
 import android.text.Editable;

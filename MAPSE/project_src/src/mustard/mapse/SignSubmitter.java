@@ -1,11 +1,8 @@
 package mustard.mapse;
 
-import mustard.mapse.R;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
-import android.util.Log;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -14,11 +11,11 @@ import android.widget.Toast;
 
 public class SignSubmitter extends Activity {
 	
-	private final String toastMessage = "Sign submitted for speed limit of ";
-	private Toast toast;
+	final String toastMessage = "Sign submitted for speed limit of ";
 	
 	SLMExtender slm;
 	Boolean debug = true;
+	WriteLog logger = new WriteLog();
 	
 	 @Override
 	    public void onCreate(Bundle savedInstanceState) {
@@ -40,15 +37,12 @@ public class SignSubmitter extends Activity {
 	        Button spd75 = (Button)findViewById(R.id.spd75);
 	        Button spd80 = (Button)findViewById(R.id.spd80);
 	        
-	        toast = Toast.makeText(getApplicationContext(), "text", Toast.LENGTH_SHORT);
-	        toast.setGravity(Gravity.CENTER, 0, 0);
-	        
 	        //Try to pull the SLM object out of the parcelable passed in
 	        Intent i = getIntent();
 	        try {
 				slm = (SLMExtender) i.getParcelableExtra("slm");
 			} catch (Exception e) {
-				Log.e("In sign SignSubmitter.java", e.getMessage());
+				logger.appendLog(e.getMessage());
 			}//end try/catch
 	        
 
@@ -65,9 +59,7 @@ public class SignSubmitter extends Activity {
 	        		if(!debug) {
 						slm.submit(slm.getContrib_name(), slm.getContrib_email(), 25, 0);
 					}//end if
-	        		toast.setText(toastMessage + "25 mph");
-	        		toast.show();
-	        		finish();
+					Toast.makeText(getApplicationContext(), toastMessage+"25 mph", Toast.LENGTH_SHORT).show();
 	        	}
 	        });
 	        
@@ -76,9 +68,7 @@ public class SignSubmitter extends Activity {
 	        		if(!debug) {
 						slm.submit(slm.getContrib_name(), slm.getContrib_email(), 30, 0);
 					}//end if
-	        		toast.setText(toastMessage + "30 mph");
-	        		toast.show();
-	        		finish();
+	        		Toast.makeText(getApplicationContext(), toastMessage+"30 mph", Toast.LENGTH_SHORT).show();
 	        	}
 	        });
 	        
@@ -87,9 +77,7 @@ public class SignSubmitter extends Activity {
 	        		if(!debug) {
 						slm.submit(slm.getContrib_name(), slm.getContrib_email(), 35, 0);
 					}//end if
-	        		toast.setText(toastMessage + "35 mph");
-	        		toast.show();
-	        		finish();
+	        		Toast.makeText(getApplicationContext(), toastMessage+"35 mph", Toast.LENGTH_SHORT).show();
 	        	}
 	        });
 	        
@@ -98,9 +86,7 @@ public class SignSubmitter extends Activity {
 	        		if(!debug) {
 						slm.submit(slm.getContrib_name(), slm.getContrib_email(), 40, 0);
 					}//end if
-	        		toast.setText(toastMessage + "40 mph");
-	        		toast.show();
-	        		finish();
+	        		Toast.makeText(getApplicationContext(), toastMessage+"40 mph", Toast.LENGTH_SHORT).show();
 	        	}
 	        });
 	        
@@ -109,9 +95,7 @@ public class SignSubmitter extends Activity {
 	        		if(!debug) {
 						slm.submit(slm.getContrib_name(), slm.getContrib_email(), 45, 0);
 					}//end if
-	        		toast.setText(toastMessage + "45 mph");
-	        		toast.show();
-	        		finish();
+	        		Toast.makeText(getApplicationContext(), toastMessage+"45 mph", Toast.LENGTH_SHORT).show();
 	        	}
 	        });
 	        
@@ -120,9 +104,7 @@ public class SignSubmitter extends Activity {
 	        		if(!debug) {
 						slm.submit(slm.getContrib_name(), slm.getContrib_email(), 50, 0);
 					}//end if
-	        		toast.setText(toastMessage + "50 mph");
-	        		toast.show();
-	        		finish();
+	        		Toast.makeText(getApplicationContext(), toastMessage+"50 mph", Toast.LENGTH_SHORT).show();
 	        	}
 	        });
 	        
@@ -131,9 +113,7 @@ public class SignSubmitter extends Activity {
 	        		if(!debug) {
 						slm.submit(slm.getContrib_name(), slm.getContrib_email(), 55, 0);
 					}//end if
-	        		toast.setText(toastMessage + "55 mph");
-	        		toast.show();
-	        		finish();
+	        		Toast.makeText(getApplicationContext(), toastMessage+"55 mph", Toast.LENGTH_SHORT).show();
 	        	}
 	        });
 	        
@@ -142,9 +122,7 @@ public class SignSubmitter extends Activity {
 	        		if(!debug) {
 						slm.submit(slm.getContrib_name(), slm.getContrib_email(), 60, 0);
 					}//end if
-	        		toast.setText(toastMessage + "60 mph");
-	        		toast.show();
-	        		finish();
+	        		Toast.makeText(getApplicationContext(), toastMessage+"60 mph", Toast.LENGTH_SHORT).show();
 	        	}
 	        });
 	        
@@ -153,9 +131,7 @@ public class SignSubmitter extends Activity {
 	        		if(!debug) {
 						slm.submit(slm.getContrib_name(), slm.getContrib_email(), 65, 0);
 					}//end if
-	        		toast.setText(toastMessage + "65 mph");
-	        		toast.show();
-	        		finish();
+	        		Toast.makeText(getApplicationContext(), toastMessage+"65 mph", Toast.LENGTH_SHORT).show();
 	        	}
 	        });
 	        
@@ -164,9 +140,7 @@ public class SignSubmitter extends Activity {
 	        		if(!debug) {
 						slm.submit(slm.getContrib_name(), slm.getContrib_email(), 70, 0);
 					}//end if
-	        		toast.setText(toastMessage + "70 mph");
-	        		toast.show();
-	        		finish();
+	        		Toast.makeText(getApplicationContext(), toastMessage+"70 mph", Toast.LENGTH_SHORT).show();
 	        	}
 	        });
 	        
@@ -175,9 +149,7 @@ public class SignSubmitter extends Activity {
 	        		if(!debug) {
 						slm.submit(slm.getContrib_name(), slm.getContrib_email(), 75, 0);
 					}//end if
-	        		toast.setText(toastMessage + "75 mph");
-	        		toast.show();
-	        		finish();
+	        		Toast.makeText(getApplicationContext(), toastMessage+"75 mph", Toast.LENGTH_SHORT).show();
 	        	}
 	        });
 	        
@@ -186,9 +158,7 @@ public class SignSubmitter extends Activity {
 	        		if(!debug) {
 						slm.submit(slm.getContrib_name(), slm.getContrib_email(), 80, 0);
 					}//end if
-	        		toast.setText(toastMessage + "80 mph");
-	        		toast.show();
-	        		finish();
+	        		Toast.makeText(getApplicationContext(), toastMessage+"80 mph", Toast.LENGTH_SHORT).show();
 	        	}
 	        });
 

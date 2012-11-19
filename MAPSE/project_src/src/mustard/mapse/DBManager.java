@@ -83,15 +83,17 @@ public class DBManager extends SQLiteOpenHelper {
         UserSettings set = new UserSettings();
  
         Cursor cursor = db.query(TABLE_SETTINGS, null, null, null, null, null, null, null);
-        if (cursor != null)
+        if (cursor != null){
             cursor.moveToFirst();
  
-        set.setUserName(cursor.getString(0));
-        set.setUserEmail(cursor.getString(1));
-        set.setAlarm(cursor.getString(2));
-        set.setCat(cursor.getString(3));
-        set.setAlarmThreshold(cursor.getInt(4));
-        set.setFirstRun(cursor.getInt(5));
+	        set.setUserName(cursor.getString(0));
+	        set.setUserEmail(cursor.getString(1));
+	        set.setAlarm(cursor.getString(2));
+	        set.setCat(cursor.getString(3));
+	        set.setAlarmThreshold(cursor.getInt(4));
+	        set.setFirstRun(cursor.getInt(5));
+	        
+        }//end if
         
         // return strings
         return set;

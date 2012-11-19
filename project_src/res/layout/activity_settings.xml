@@ -1,0 +1,156 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/openroad" >
+
+    <TextView
+        android:id="@+id/name_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/name_prompt"
+        android:textColor="@color/Yellow"
+        tools:context=".Settings" />
+
+    <EditText
+        android:id="@+id/txt_name"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/name_prompt"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="@string/name_hint"
+        android:inputType="textPersonName"
+        android:maxHeight="10dp"
+        android:paddingBottom="1dp"
+        android:paddingTop="1dp"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/email_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txt_name"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/email_prompt"
+        android:textColor="@color/Yellow"
+        tools:context=".Settings" />
+
+    <EditText
+        android:id="@+id/txt_email"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/email_prompt"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="@string/email_hint"
+        android:inputType="textEmailAddress"
+        android:paddingBottom="1dp"
+        android:paddingTop="1dp" />
+
+    <TextView
+        android:id="@+id/thresh_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txt_email"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/thresh_prompt"
+        android:textColor="@color/Yellow"
+        tools:context=".Settings" />
+
+    <EditText
+        android:id="@+id/slct_num"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/thresh_prompt"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="1dp"
+        android:inputType="number"
+        android:paddingBottom="1dp"
+        android:paddingTop="1dp" />
+
+    <TextView
+        android:id="@+id/alarm_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/slct_num"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/alarm_prompt"
+        android:textColor="@color/Yellow"
+        tools:context=".Settings" />
+
+    <Spinner
+        android:id="@+id/alarm_spinner"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/alarm_prompt"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="1dp"
+        android:paddingTop="1dp" />
+
+    <TextView
+        android:id="@+id/cat_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/alarm_spinner"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/cat_prompt"
+        android:textColor="@color/Yellow"
+        tools:context=".Settings" />
+
+    <Spinner
+        android:id="@+id/cat_spinner"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/cat_prompt"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="1dp"
+        android:paddingTop="1dp" />
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:id="@+id/viewDisclaimer"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp"
+        android:text="@string/disclaim_btn" />
+
+</RelativeLayout>

@@ -1,0 +1,253 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/openroad" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/spd25"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/spdbutton"
+            android:height="80dp"
+            android:text="@string/spd25"
+            android:textColor="@color/DarkBlue"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:typeface="monospace"
+            android:width="60dip" />
+
+        <View 
+             android:layout_width="40dp"
+             android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/spd30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/spdbutton"
+            android:gravity="center"
+            android:text="@string/spd30"
+            android:typeface="monospace"
+            android:textColor="@color/DarkBlue"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:width="60dip"
+            android:height="80dp"  />
+
+        <View 
+             android:layout_width="40dp"
+             android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/spd35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spdbutton"
+            android:textColor="@color/DarkBlue"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:width="60dip"
+            android:height="80dp" 
+            android:text="@string/spd35"
+            android:typeface="monospace" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/spd40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spdbutton"
+            android:textColor="@color/DarkBlue"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:typeface="monospace"
+            android:width="60dip"
+            android:height="80dp" 
+            android:text="@string/spd40" />
+        <View 
+             android:layout_width="40dp"
+             android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/spd45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spdbutton"
+            android:typeface="monospace"
+            android:textColor="@color/DarkBlue"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:width="60dip"
+            android:height="80dp" 
+            android:text="@string/spd45" />
+        <View 
+             android:layout_width="40dp"
+             android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/spd50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spdbutton"
+            android:typeface="monospace"
+            android:textColor="@color/DarkBlue"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:width="60dip"
+            android:height="80dp" 
+            android:text="@string/spd50" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/spd55"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spdbutton"
+            android:textColor="@color/DarkBlue"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:width="60dip"
+            android:typeface="monospace"
+            android:height="80dp" 
+            android:text="@string/spd55" />
+        <View 
+             android:layout_width="40dp"
+             android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/spd60"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spdbutton"
+            android:typeface="monospace"
+            android:textColor="@color/DarkBlue"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:width="60dip"
+            android:height="80dp" 
+            android:text="@string/spd60" />
+        <View 
+             android:layout_width="40dp"
+             android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/spd65"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spdbutton"
+            android:typeface="monospace"
+            android:textColor="@color/DarkBlue"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:width="60dip"
+            android:height="80dp" 
+            android:text="@string/spd65" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/spd70"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:typeface="monospace"
+            android:background="@drawable/spdbutton"
+            android:textColor="@color/DarkBlue"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:width="60dip"
+            android:height="80dp" 
+            android:text="@string/spd70" />
+        <View 
+             android:layout_width="40dp"
+             android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/spd75"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spdbutton"
+            android:textColor="@color/DarkBlue"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:typeface="monospace"
+            android:width="60dip"
+            android:height="80dp" 
+            android:text="@string/spd75" />
+        <View 
+             android:layout_width="40dp"
+             android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/spd80"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spdbutton"
+            android:typeface="monospace"
+            android:textColor="@color/DarkBlue"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:width="60dip"
+            android:height="80dp" 
+            android:text="@string/spd80" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/back"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:selectAllOnFocus="false"
+        android:text="@string/sbmtmsg"
+        android:textAllCaps="false"
+        android:textColor="#ffffff" 
+        android:layout_marginBottom="10dp" />
+
+	<Button
+	    android:id="@+id/back"
+	    style="?android:attr/buttonStyleSmall"
+	    android:layout_width="100dp"
+	    android:layout_height="40dp"
+	    android:layout_alignParentBottom="true"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginBottom="10dp"
+	    android:text="@string/back_btn"
+	    android:textColor="#000000"
+	    android:textSize="12dp" />
+
+</RelativeLayout>
